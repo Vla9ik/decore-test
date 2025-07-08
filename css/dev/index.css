@@ -221,9 +221,8 @@ body {
 }
 
 .main-mask {
-  aspect-ratio: 1360/1025;
-  max-width: 85rem;
   max-height: 97vh;
+  min-height: 21.875rem;
   position: relative;
 }
 .main-mask::before {
@@ -231,12 +230,41 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0%;
   left: 0;
+  bottom: 0%;
   background: url("../assets/img/main-decore.png") right bottom/100% no-repeat;
 }
 .main-mask__slider {
-  max-width: 95.22%; /* 1295/1360 */
+  position: relative;
+}
+.main-mask__swiper-pagination {
+  justify-content: center;
+  min-height: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  z-index: 10;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-mask__swiper-pagination .swiper-pagination-bullet {
+  display: block;
+  cursor: pointer;
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: 0 0 0.875rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.125rem solid #a9d944;
+  transition: all 0.3s;
+}
+.main-mask__swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 2.25rem;
+  border-radius: 3.125rem;
+  flex: 0 0 2.25rem;
+  background-color: #a9d944;
 }
 .main-mask__image {
   mask-image: url("../assets/img/main-mask.png");
@@ -253,6 +281,161 @@ body {
   object-position: 30%;
 }
 
+.presentation {
+  width: 100%;
+  position: relative;
+}
+.presentation__slider {
+  padding: 1.25rem;
+}
+.presentation__slide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.presentation__slide.swiper-slide-fully-visible.swiper-slide-active.swiper-slide-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.presentation__slide h2 {
+  color: #200501;
+  font-family: "Appetite";
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+
 .divider {
   margin-bottom: 9.375rem;
+}
+
+@media (max-width: 62em) {
+  .main-mask__swiper-pagination {
+    padding-left: 0.9375rem;
+  }
+  .presentation__slide h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 48em) {
+  .main-mask__swiper-pagination .swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    flex: 0 0 0.5rem;
+  }
+  .main-mask__swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    flex: 0 0 1.125rem;
+    width: 1.125rem;
+  }
+  .presentation__slide h2 {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .main-mask::before {
+    left: -0.3125rem;
+  }
+  .main-mask__image {
+    mask-position: 50% 100%;
+  }
+  .main-mask__image img {
+    aspect-ratio: 320/350;
+  }
+  .presentation__slide h2 {
+    max-width: 18.75rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 20em) {
+  .presentation__slide h2::before {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 3.125rem;
+    top: 0;
+    z-index: -1;
+    right: -1.25rem;
+    background: url("../assets/img/presentation/mobile-decore.svg") 0 0/100% no-repeat;
+  }
+}
+
+@media (min-width: 31.25em) {
+  .main-mask {
+    aspect-ratio: 1360/1025;
+  }
+  .main-mask__slider {
+    max-width: 95.22%;
+  }
+  .presentation__slide h2::before {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 3.125rem;
+    top: 0;
+    right: 0;
+    background: url("../assets/img/presentation/mobile-decore.svg") 0 0/100% no-repeat;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 120em) {
+  .presentation__slide h2 {
+    font-size: clamp( 1.375rem , 6.25e-8rem  +  2.8645833333vw , 3.4375rem );
+  }
+}
+
+@media (min-width: 48em) {
+  .main-mask {
+    max-width: 60%;
+  }
+  .presentation {
+    display: flex;
+  }
+  .presentation::before {
+    content: "";
+    position: absolute;
+    width: 35%; /* 670/1920 */
+    height: 100%;
+    top: 0;
+    right: -10%;
+    background: url("../assets/img/presentation/pc-decore.svg") right bottom/cover no-repeat;
+  }
+  .presentation__slider {
+    align-self: center;
+  }
+  .presentation__slide h2::before {
+    display: none;
+  }
+}
+
+@media (min-width: 62rem) {
+  .main-mask__swiper-pagination {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 62em) and (max-width: 120em) {
+  .main-mask__swiper-pagination {
+    padding-left: clamp( 0.9375rem , -5.40948275861875rem  +  10.2370689655vw , 6.875rem );
+  }
+}
+
+@media (min-width: 62em) {
+  .main-mask {
+    max-width: 70%;
+  }
+  .presentation__slider {
+    flex: 0 0 30%;
+  }
+}
+
+@media (min-width: 120em) {
+  .main-mask__swiper-pagination {
+    padding-left: 6.875rem;
+  }
+  .presentation__slide h2 {
+    font-size: 3.4375rem;
+  }
 }
