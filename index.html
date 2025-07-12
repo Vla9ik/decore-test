@@ -5,8 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1751989811340"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1751989811340">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1752280558562"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1752280558562">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1752280558562">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -23,17 +25,29 @@
 								<div class="main-mask__wrapper swiper-wrapper">
 									<div class="main-mask__slide swiper-slide">
 										<div class="main-mask__image">
-											<img src="./assets/img/main-image.jpg" alt="Image">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/main-image-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/main-image-1200.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/main-image.webp">
+											</picture>
 										</div>
 									</div>
 									<div class="main-mask__slide swiper-slide">
 										<div class="main-mask__image">
-											<img src="./assets/img/img-2.jpg" alt="Image">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/img-2-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/img-2-1200.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/img-2.webp">
+											</picture>
 										</div>
 									</div>
 									<div class="main-mask__slide swiper-slide">
 										<div class="main-mask__image">
-											<img src="./assets/img/main-image.jpg" alt="Image">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/main-image-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/main-image-1200.webp" type="image/webp">
+												<img alt="Image" src="./assets/img/main-image.webp">
+											</picture>
 										</div>
 									</div>
 								</div>
@@ -57,20 +71,29 @@
 					<div class="divider"></div>
 					<div class="mask">
 						<div class="mask__wrap">
-							<img src="./assets/img/img.jpg" alt="Image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/img-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/img.webp">
+							</picture>
 						</div>
 					</div>
 					<div class="divider"></div>
 					<div class="mask mask--reverse">
 						<div class="mask__wrap">
-							<img src="./assets/img/img.jpg" alt="Image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/img-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/img.webp">
+							</picture>
 						</div>
 					</div>
 					<div class="divider"></div>
 					<div class="mask mask--corner">
 						<div class="mask__wrap">
 							<div class="mask__image-wrap">
-								<img src="./assets/img/corner-image.jpg" alt="Image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/corner-image-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/corner-image.webp">
+								</picture>
 							</div>
 						</div>
 					</div>
@@ -78,7 +101,10 @@
 					<div class="mask mask--reverse mask--corner">
 						<div class="mask__wrap">
 							<div class="mask__image-wrap">
-								<img src="./assets/img/corner-image.jpg" alt="Image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/corner-image-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/corner-image.webp">
+								</picture>
 							</div>
 						</div>
 					</div>
