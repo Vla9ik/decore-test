@@ -137,13 +137,13 @@ body {
   overflow: hidden;
   padding-left: 4%;
   aspect-ratio: 705/576;
-  mask-image: url("../assets/img/corner.webp");
+  mask-image: url("../assets/img/corner.png");
   mask-size: contain;
   mask-position: left 0;
   mask-repeat: no-repeat;
 }
 .mask.mask--corner .mask__wrap .mask__image-wrap {
-  mask-image: url("../assets/img/corner-img-mask.webp");
+  mask-image: url("../assets/img/corner-img-mask.png");
   mask-size: 100%;
   mask-position: right 52%;
   mask-repeat: no-repeat;
@@ -158,11 +158,11 @@ body {
   bottom: 0%;
   left: -8%;
   z-index: -1;
-  background: url("../assets/img/corner-decore.webp") left bottom/contain no-repeat;
+  background: url("../assets/img/corner-decore.png") left bottom/contain no-repeat;
 }
 .mask__wrap {
   max-width: 93.65%; /* 768/820 */
-  mask-image: url("../assets/img/mask-clip.webp");
+  mask-image: url("../assets/img/mask-clip.png");
   mask-size: contain;
   mask-position: left center;
   mask-repeat: no-repeat;
@@ -181,7 +181,7 @@ body {
   height: 100%;
   bottom: -12%;
   left: 0%;
-  background: url("../assets/img/decore.webp") left bottom/130% 74% no-repeat;
+  background: url("../assets/img/decore.png") left bottom/130% 74% no-repeat;
 }
 
 .main-mask {
@@ -196,7 +196,7 @@ body {
   height: 100%;
   left: 0;
   bottom: 0%;
-  background: url("../assets/img/main-decore.webp") right bottom/100% no-repeat;
+  background: url("../assets/img/main-decore.png") right bottom/100% no-repeat;
 }
 .main-mask__slider {
   position: relative;
@@ -231,7 +231,7 @@ body {
   background-color: #a9d944;
 }
 .main-mask__image {
-  mask-image: url("../assets/img/main-mask.webp");
+  mask-image: url("../assets/img/main-mask.png");
   mask-size: cover;
   mask-position: right 100%;
   mask-repeat: no-repeat;

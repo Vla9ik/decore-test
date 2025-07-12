@@ -11,7 +11,7 @@
   transform: translate(-50%, 0rem);
   width: 20vw; /* 390/1600 */
   aspect-ratio: 390/364;
-  background: url("../assets/img/contacts/honey.webp") 0 0/100% no-repeat;
+  background: url("../assets/img/contacts/honey.png") 0 0/100% no-repeat;
 }
 .contacts__grid-container {
   display: grid;
